@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация | Уютное Кафе "Кофейня"</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Уютное Кафе "Кофейня"</h1>
+            <p>Войдите в свою учетную запись</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="menu.html">Меню</a></li>
+            <li><a href="about.html">О нас</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+            <li><a href="auth.html" class="active">Вход</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="auth-section">
+            <div class="auth-container">
+                <h2>Авторизация</h2>
+                <form id="authForm" class="auth-form">
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required 
+                               placeholder="ваш@email.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Пароль:</label>
+                        <input type="password" id="password" name="password" required 
+                               placeholder="Введите пароль" minlength="6">
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="remember" name="remember">
+                        <label for="remember">Запомнить меня</label>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="agreement" name="agreement" required>
+                        <label for="agreement">Согласен на обработку персональных данных</label>
+                    </div>
+
+                    <button type="submit" class="btn auth-btn">Войти</button>
+                </form>
+                
+                <div class="auth-links">
+                    <p><a href="#">Забыли пароль?</a></p>
+                    <p>Нет аккаунта? <a href="#">Зарегистрируйтесь</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Уютное Кафе "Кофейня". Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>
