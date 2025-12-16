@@ -1,0 +1,328 @@
+/* Подключаем переменные и анимации */
+@import url('variables.css');
+@import url('animations.css');
+
+/* Базовые стили */
+* { box-sizing: border-box; }
+
+body {
+    background-color: var(--background-beige);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* Общие компоненты */
+.header-content {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, var(--primary-brown), var(--secondary-brown));
+    color: var(--white);
+}
+
+.header-content h1 { 
+    margin: 0; 
+    font-size: 2.5em; 
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.header-content p { 
+    margin: 10px 0 0 0; 
+    font-style: italic; 
+    animation: fadeInUp 1s ease-out;
+}
+
+/* FLEXBOX - Навигация и главная страница */
+nav { 
+    background-color: var(--secondary-brown); 
+    padding: 15px 0; 
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+}
+
+.menu a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: var(--border-radius);
+    transition: all var(--transition-fast);
+}
+
+.menu a:hover,
+.menu a.active {
+    background-color: var(--accent-gold);
+    color: var(--primary-brown);
+}
+
+/* Основной контент */
+main { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 20px; 
+}
+
+/* FLEXBOX секции */
+.welcome, .offer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.welcome { 
+    margin-bottom: 40px; 
+    animation: fadeInUp 1.2s ease-out;
+}
+
+.advantages { 
+    margin-bottom: 40px; 
+    animation: fadeInUp 1.4s ease-out;
+}
+
+.advantages h2, .special-offer h2 { 
+    text-align: center; 
+    color: var(--primary-brown); 
+    margin-bottom: 30px;
+}
+
+.advantages-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Карточки (используются везде) */
+.advantage-item, .menu-category, .auth-container {
+    background-color: var(--white);
+    padding: var(--section-padding);
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: var(--shadow-light);
+    animation: fadeInUp 0.6s ease-out;
+    transition: all var(--transition-fast);
+}
+
+.advantage-item:hover, .menu-category:hover {
+    animation: cardHover 0.3s forwards;
+}
+
+.advantage-item { 
+    flex: 1; 
+    min-width: 250px; 
+}
+
+.advantage-item h3 { 
+    color: var(--primary-brown); 
+    margin-bottom: 15px; 
+}
+
+/* Спецпредложение */
+.special-offer {
+    background-color: var(--light-beige);
+    padding: var(--section-padding);
+    border-radius: var(--border-radius);
+    border: 2px dashed var(--primary-brown);
+    animation: fadeInUp 1.6s ease-out;
+}
+
+.special-offer h2 { 
+    color: var(--error-red); 
+}
+
+/* Кнопка */
+.btn {
+    display: inline-block;
+    background-color: var(--primary-brown);
+    color: var(--white);
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em;
+    animation: pulse 2s infinite;
+    transition: all var(--transition-fast);
+}
+
+.btn:hover {
+    background-color: var(--secondary-brown);
+    transform: translateY(-2px);
+}
+
+/* GRID ВЕРСТКА - Меню */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.menu-category h3 {
+    color: var(--primary-brown);
+    border-bottom: 2px solid var(--accent-gold);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.menu-item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--light-beige);
+}
+
+.menu-item:last-child { border-bottom: none; }
+
+.item-name { 
+    font-weight: bold; 
+    color: var(--primary-brown); 
+}
+
+.item-price { 
+    font-weight: bold; 
+    color: var(--error-red); 
+    text-align: right; 
+}
+
+.item-description {
+    grid-column: 1 / -1;
+    color: var(--gray-light);
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+/* Форма авторизации */
+.auth-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    padding: var(--section-padding);
+}
+
+.auth-container { 
+    width: 100%; 
+    max-width: 400px; 
+    box-shadow: var(--shadow-medium);
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--primary-brown);
+}
+
+.form-group input {
+    padding: 12px;
+    border: 1px solid var(--gray-light);
+    border-radius: var(--border-radius);
+    font-size: 1em;
+    transition: all var(--transition-fast);
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary-brown);
+    box-shadow: 0 0 0 2px rgba(139, 69, 19, 0.2);
+}
+
+.checkbox-group {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox-group label { 
+    font-weight: normal; 
+    margin-bottom: 0; 
+}
+
+.checkbox-group input { 
+    width: 18px; 
+    height: 18px; 
+    transition: all var(--transition-fast);
+}
+
+.checkbox-group input:checked {
+    accent-color: var(--primary-brown);
+    transform: scale(1.1);
+}
+
+.auth-btn { 
+    width: 100%; 
+    margin-top: 10px; 
+}
+
+.auth-links {
+    margin-top: 20px;
+    text-align: center;
+    border-top: 1px solid var(--light-beige);
+    padding-top: 20px;
+}
+
+.auth-links a {
+    color: var(--primary-brown);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.auth-links a:hover {
+    color: var(--secondary-brown);
+    text-decoration: underline;
+}
+
+/* Подвал */
+footer {
+    background-color: var(--text-dark);
+    color: var(--white);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .menu { 
+        flex-direction: column; 
+        gap: 10px; 
+        align-items: center; 
+    }
+    
+    .advantages-list, .menu-grid { 
+        flex-direction: column; 
+        grid-template-columns: 1fr; 
+    }
+    
+    .header-content h1 { 
+        font-size: 2em; 
+    }
+    
+    .auth-container { 
+        margin: 0 10px; 
+        padding: 20px; 
+    }
+}
