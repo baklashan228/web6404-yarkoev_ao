@@ -1,0 +1,45 @@
+{
+    "/users": {
+        "get": {
+            "data": [
+                {"id": 1, "email": "test@example.com", "password": "******", "remember": true, "agreement": true}
+            ]
+        },
+        "post": {
+            "data": [
+                {"id": 2, "email": "new@user.com", "password": "******", "remember": false, "agreement": true}
+            ]
+        }
+    },
+    "/menu": {
+        "get": {
+            "data": [
+                {
+                    "id": 1,
+                    "category": "☕ Горячие напитки",
+                    "items": [
+                        {"id": 1, "name": "Эспрессо", "description": "Классический крепкий кофе", "price": 150},
+                        {"id": 2, "name": "Американо", "description": "Эспрессо с горячей водой", "price": 180},
+                        {"id": 3, "name": "Капучино", "description": "Эспрессо с молочной пенкой", "price": 250}
+                    ]
+                },
+                {
+                    "id": 2,
+                    "category": "🍰 Десерты и выпечка", 
+                    "items": [
+                        {"id": 4, "name": "Тирамису", "description": "Классический итальянский десерт", "price": 320},
+                        {"id": 5, "name": "Чизкейк Нью-Йорк", "description": "Нежный творожный десерт", "price": 280}
+                    ]
+                },
+                {
+                    "id": 3, 
+                    "category": "🍳 Завтраки",
+                    "items": [
+                        {"id": 6, "name": "Английский завтрак", "description": "Яичница, бекон, сосиски, фасоль, тосты", "price": 450},
+                        {"id": 7, "name": "Сырники", "description": "С творогом и сметаной", "price": 290}
+                    ]
+                }
+            ]
+        }
+    }
+}
