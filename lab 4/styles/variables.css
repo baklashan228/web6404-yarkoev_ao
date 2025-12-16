@@ -1,0 +1,29 @@
+/* CSS переменные для цветов */
+:root {
+    /* Основные цвета */
+    --primary-brown: #8B4513;
+    --secondary-brown: #A0522D;
+    --accent-gold: #FFD700;
+    --background-beige: #F5F5DC;
+    --text-dark: #333333;
+    --white: #FFFFFF;
+    --light-beige: #FFF8DC;
+    
+    /* Дополнительные цвета */
+    --success-green: #228B22;
+    --error-red: #8B0000;
+    --warning-orange: #FF8C00;
+    --gray-light: #666666;
+    
+    /* Тени */
+    --shadow-light: 0 2px 5px rgba(0,0,0,0.1);
+    --shadow-medium: 0 5px 15px rgba(0,0,0,0.2);
+    
+    /* Анимации */
+    --transition-fast: 0.3s ease;
+    --transition-slow: 0.5s ease;
+    
+    /* Размеры */
+    --border-radius: 10px;
+    --section-padding: 30px;
+}
